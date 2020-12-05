@@ -29,3 +29,7 @@ app.use((req, res, next) => { //Authentication
       res.send("send");
     }
   });
+
+  app.listen(port, ()=>{
+      console.log("I am listenin on %s:%s",host,port)
+  })
