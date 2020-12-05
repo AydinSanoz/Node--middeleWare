@@ -1,3 +1,13 @@
+const express = require("express");
+require("dotenv").config();
+const logger = require("morgan");
+const port = process.env.port || 5001;
+const host = "localhost";
+const app = express();
+//middleware
+app.use(logger("dev"));
+
+
 app.use((req, res, next) => { //Authentication
     console.log("Auth");
     // some jobs
